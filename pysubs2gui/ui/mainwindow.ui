@@ -77,6 +77,9 @@
          <property name="openExternalLinks">
           <bool>false</bool>
          </property>
+         <property name="buddy">
+          <cstring>inputEncodingCombo</cstring>
+         </property>
         </widget>
        </item>
        <item>
@@ -202,9 +205,9 @@
        <property name="geometry">
         <rect>
          <x>170</x>
-         <y>30</y>
+         <y>20</y>
          <width>111</width>
-         <height>31</height>
+         <height>51</height>
         </rect>
        </property>
        <property name="text">
@@ -225,6 +228,9 @@
          <widget class="QLabel" name="label_3">
           <property name="text">
            <string>Input:</string>
+          </property>
+          <property name="buddy">
+           <cstring>transformFramerateInputSpinbox</cstring>
           </property>
          </widget>
         </item>
@@ -251,6 +257,9 @@
          <widget class="QLabel" name="label_4">
           <property name="text">
            <string>Output:</string>
+          </property>
+          <property name="buddy">
+           <cstring>transformFramerateOutputSpinbox</cstring>
           </property>
          </widget>
         </item>
@@ -344,6 +353,9 @@
          <property name="text">
           <string>Output Format:</string>
          </property>
+         <property name="buddy">
+          <cstring>outputFormatCombo</cstring>
+         </property>
         </widget>
        </item>
        <item row="0" column="1">
@@ -353,6 +365,9 @@
         <widget class="QLabel" name="label_9">
          <property name="text">
           <string>Output Framerate:</string>
+         </property>
+         <property name="buddy">
+          <cstring>outputEncodingFramerateSpinbox</cstring>
          </property>
         </widget>
        </item>
@@ -403,6 +418,9 @@
          </property>
          <property name="openExternalLinks">
           <bool>false</bool>
+         </property>
+         <property name="buddy">
+          <cstring>outputEncodingCombo</cstring>
          </property>
         </widget>
        </item>
@@ -634,7 +652,7 @@ p, li { white-space: pre-wrap; }
  <connections>
   <connection>
    <sender>actionExit</sender>
-   <signal>activated()</signal>
+   <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
    <slot>close()</slot>
    <hints>
