@@ -89,7 +89,7 @@ class MainWindow(UnicodeTrMixin, QMainWindow, Ui_MainWindow):
         input_encoding = self.getInputEncoding()
 
         if self.changeEncodingGroup.isChecked():
-            output_encoding = self.outputEncodingCombo.currentText()
+            output_encoding = _str(self.outputEncodingCombo.currentText())
         else:
             output_encoding = input_encoding
 
@@ -106,7 +106,7 @@ class MainWindow(UnicodeTrMixin, QMainWindow, Ui_MainWindow):
         if self.importStylesGroup.isChecked():
             raise NotImplementedError("XXX")
         if self.useOutputDirectoryRadio.isChecked():
-            processor.output_dir = self.outputDirectoryEdit.text()
+            processor.output_dir = _str(self.outputDirectoryEdit.text())
         if self.changeFormatGroup.isChecked():
             processor.output_format = self.getOutputFormat()
             processor.output_fps = self.outputEncodingFramerateSpinbox.value()
